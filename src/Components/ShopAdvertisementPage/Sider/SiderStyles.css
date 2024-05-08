@@ -1,0 +1,77 @@
+#siderMenu {
+  width: 100% !important;
+  padding: 15px 15px !important;
+  margin: 25px 0px !important;
+}
+#shopPageMenuCol {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 4rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.boxShopmenu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+.boxShopmenu > #titleDivision {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.boxShopmenu > #titleDivision > h3 {
+  font-size: 1rem;
+}
+span#shopPageheadingLine {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  border-radius: 50px;
+  background-color: #333;
+}
+.boxShopmenu > label {
+  width: 100%;
+  font-size: 1rem;
+}
+.boxShopmenu > label > span:nth-child(2) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#shopPageAdvertiseFirstSelectBox {
+  background-color: inherit;
+  padding: 3px 4px !important;
+  border: none;
+  outline: none;
+}
+.shopPageMenuSeeAllBTN {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 1rem;
+}
+.shopPageMenuSeeAllBTN > span {
+  padding-bottom: 3px !important;
+  display: inline-block;
+  border-bottom: 2px solid #333;
+  cursor: pointer;
+}
+
+@media (max-width: 769px) {
+  .boxShopmenu > #titleDivision > h3 {
+    font-size: 20px;
+  }
+  .boxShopmenu > label {
+    font-size: 12px;
+  }
+  .shopPageMenuSeeAllBTN {
+    font-size: 12px;
+  }
+}

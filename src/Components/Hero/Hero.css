@@ -1,0 +1,228 @@
+.Hero-Container {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin: 15px 0px !important;
+}
+.prevBTN {
+  position: absolute !important;
+  left: 1%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+.nxtBTN {
+  position: absolute !important;
+  right: 1%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+.contentContainer {
+  position: relative;
+}
+.Hero-Container .contentContainer img {
+  min-height: 50vh;
+  width: 100%;
+  max-height: 70vh !important;
+  height: 50vw;
+  filter: blur(0.7px);
+  object-fit: cover;
+}
+.content {
+  position: absolute;
+  left: 60%;
+  top: 55%;
+  transform: translate(-60%, -55%);
+}
+.anotherContent {
+  position: absolute;
+  left: 12%;
+  top: 55%;
+  transform: translate(-10%, -55%);
+}
+.contentContainerAdvertise {
+  position: relative;
+  height: 100%;
+}
+.contentContainerAdvertise > img {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: cover;
+}
+.contentAdvertise {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-10%, -55%);
+}
+#innerContenAdvertise {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+#innerContenAdvertise > h1 {
+  font-size: 2rem;
+}
+#innerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+#innerContent h3 {
+  margin: 12px 0px !important;
+  background: rgba(206, 203, 226, 1);
+  color: rgba(4, 30, 66, 1);
+  border-radius: 6px;
+  padding: 0.5rem 1rem !important;
+  font-size: 1rem;
+}
+
+#innerContent h1 {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 1);
+  line-height: 3.5rem;
+  margin: 0 !important;
+  text-align: left;
+}
+#innerContent p {
+  margin: 12px 0px !important;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 1);
+}
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotateZ(0);
+  }
+  100% {
+    transform: translateY(-500px) rotateZ(720deg);
+  }
+}
+
+#HeroBTN {
+  margin: 1rem 0px !important;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 6px;
+  background: rgba(245, 195, 75, 1);
+  border: 1px solid rgba(245, 195, 75, 1);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out;
+  position: relative; /* Position relative for absolute positioning of confetti */
+}
+
+#HeroBTN:hover {
+  width: 9.4rem;
+}
+
+#HeroBTN:hover::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 255, 208); /* Confetti color */
+  top: 100%;
+  left: 50%;
+  animation: confetti 1s ease-in-out; /* Apply animation */
+  animation-fill-mode: forwards;
+  transform-origin: top left;
+}
+
+#HeroBTNAdvertise {
+  width: 9rem;
+  height: 3rem;
+  border-radius: 6px;
+  background: rgba(245, 195, 75, 1);
+  border: 1px solid rgba(245, 195, 75, 1);
+  font-size: 1rem;
+}
+
+@media (max-width: 769px) {
+  .content {
+    position: absolute;
+    left: 70%;
+    top: 65%;
+    transform: translate(-60%, -55%);
+  }
+  #innerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .content #innerContent p {
+    font-size: 15px;
+  }
+
+  #innerContenAdvertise {
+    gap: 1vw;
+  }
+  #innerContenAdvertise > h1 {
+    font-size: 16px;
+  }
+  #innerContenAdvertise > p {
+    font-size: 12px;
+  }
+  #HeroBTNAdvertise {
+    width: 55px;
+    height: 20px;
+    border-radius: 6px;
+    background: rgba(245, 195, 75, 1);
+    border: 1px solid rgba(245, 195, 75, 1);
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 476px) {
+  .contentContainer img {
+    width: auto;
+    height: 65vh;
+    object-fit: cover;
+  }
+  .content {
+    width: 100%;
+    left: 40%;
+    top: 75%;
+    transform: translate(-30%, -75%);
+  }
+  .nxtBTN,
+  .prevBTN {
+    display: none !important;
+  }
+
+  #innerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+  #innerContent h3 {
+    margin: 0px !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.6rem;
+  }
+
+  #innerContent h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  #innerContent p {
+    margin: 0px !important;
+    font-size: 1rem;
+  }
+  #HeroBTN {
+    margin: 0px !important;
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.6rem;
+  }
+}

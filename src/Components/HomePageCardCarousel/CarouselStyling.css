@@ -1,0 +1,243 @@
+.Carousel-Container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 50px 0px !important;
+}
+.Carousel-Nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px !important;
+}
+.Carousel-Heading {
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.Carousel-Links {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.Carousel-Links > li {
+  position: relative;
+}
+
+.Carousel-Links > li::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust as needed */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(52, 126, 179);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out 0.3s; /* Smooth transition with delay */
+}
+
+.Carousel-Links > li:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.Carousel-Links::-webkit-scrollbar {
+  width: 0px;
+}
+.Carousel-Links > li {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+}
+#NavLeftButton,
+#NavRightButton {
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  transform: translateY(-50%);
+}
+#NavLeftButton {
+  left: 1%;
+}
+#NavRightButton {
+  right: 1%;
+}
+.card-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.Card {
+  width: 100% !important;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem !important;
+  padding: 1rem !important;
+}
+.ant-card-bordered .ant-card-cover {
+  width: auto;
+  height: 100%;
+  position: relative;
+  margin: 0 auto !important;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.ant-card-bordered .ant-card-cover > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#ShowOnHover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#TopShowOnHovered {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 7px 5px !important;
+}
+.showOnHoverImgBox {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.545);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  padding: 5px;
+}
+.showOnHoverImgBox:hover {
+  background-color: #a6db21;
+}
+.showOnHoverImgBox > img {
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+}
+#BottomShowOnHovered {
+  width: 100%;
+  height: 2rem;
+}
+#BottomShowOnHovered > button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #42aeb2;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.card .brand {
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+}
+.card-title {
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+}
+#ratingdets,
+#pricingDets {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.review-para,
+.price-saled {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.price-initial {
+  font-size: 1rem;
+}
+@media (max-width: 1170px) {
+  .Carousel-Heading {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 1025px) {
+  .Carousel-Heading {
+    font-size: 1rem;
+  }
+  .Carousel-Links > li {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+@media (max-width: 800px) {
+  .Carousel-Nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 575px) {
+  .Carousel-Nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 9px !important;
+  }
+  .Carousel-Heading {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+  }
+  .Carousel-Links {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .Carousel-Links > li {
+    font-size: 14px;
+  }
+  .Card {
+    align-items: center;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  #ratingdets,
+  #pricingDets {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .review-para,
+  .price-saled {
+    font-size: 12px;
+  }
+  .price-initial {
+    font-size: 15px;
+  }
+}

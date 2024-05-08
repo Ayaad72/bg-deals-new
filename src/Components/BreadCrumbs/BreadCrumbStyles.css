@@ -1,0 +1,45 @@
+.ant-breadcrumb {
+  margin: 25px 0px !important;
+}
+.ant-breadcrumb > ol {
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.ant-breadcrumb > ol > li > span {
+  display: flex;
+  align-items: center;
+}
+.ant-breadcrumb > ol > li > span > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ant-breadcrumb > ol > li > span > a > span > svg,
+.ant-breadcrumb > ol > li > span > span > svg {
+  height: 25px;
+  width: 25px;
+  /* fill: blue; */
+}
+.ant-breadcrumb > ol > li > span > a > span > svg {
+  width: 30px;
+  height: 30px;
+  /* fill: green; */
+}
+
+@media (max-width: 575px) {
+  .ant-breadcrumb > ol {
+    font-size: 10px;
+    gap: 3px;
+  }
+  .ant-breadcrumb > ol > li > span > a > span > svg,
+  .ant-breadcrumb > ol > li > span > span > svg {
+    height: 17px;
+    width: 17px;
+  }
+  .ant-breadcrumb > ol > li > span > a > span > svg {
+    width: 20px;
+    height: 20px;
+  }
+}

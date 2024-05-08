@@ -1,0 +1,53 @@
+.page-add-division {
+  margin: 50px 0 !important;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 20rem;
+}
+#content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 7rem !important;
+}
+.priceDetails {
+  font-size: 1rem;
+  color: blue;
+}
+.priceDetailsBold {
+  font-weight: 500;
+}
+h1 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+#buttonPageAdd {
+  width: auto;
+  padding: 0 !important;
+  height: auto;
+  font-size: 1rem;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  text-align: left;
+}
+#buttonPageAdd > span {
+  border-bottom: 2px solid #333;
+  padding: 3px 1px !important;
+}
+#buttonPageAdd > span:hover {
+  cursor: pointer;
+  font-size: 1.2vw;
+}
+
+@media (max-width: 768.5px) {
+  .page-add-division {
+    background-position: center;
+    margin: 50px 0 !important;
+    height: 30vh;
+  }
+}
